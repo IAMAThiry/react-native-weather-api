@@ -32,6 +32,25 @@ export async function getWeather(args) {
        
 }
 
+export async function getHistory(args) {
+
+    var result;
+    //Start date (unix time, UTC time zone), e.g. start=1369728000
+    var URL = "https://history.openweathermap.org/data/2.5/history/city?lat=" + args.lat + "&lon=" + args.long + "&type=hour&start=" + args.start + "&end=" + args.end + "&appid=" + args.key
+
+    await fetch(URL)
+    .then(res => res.json())
+    .then((data) => {
+    
+    result = data;
+    //  current = data;
+    //  result = Promise.resolve("Success");
+		
+                });
+	
+    return result;
+}
+
 export async function dailyForecast(args) {
 	
 	var result;

@@ -1,5 +1,5 @@
 import {getLocation} from "./location";
-import {getWeather, dailyForecast, showWeather} from "./weather";
+import {getWeather, dailyForecast, showWeather, getHistory} from "./weather";
 
 
-export {getLocation, getWeather, dailyForecast, showWeather};
+export {getLocation, getWeather, dailyForecast, getHistory, showWeather};
